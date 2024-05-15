@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Facharbeit.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui">
+
+    <ScrollView>
+        <Grid ColumnDefinitions="*,*">
+            <VerticalStackLayout
+                Grid.Column="0"
+                Padding="30,0"
+                Spacing="25">
+                <Label x:Name="UsernameLabel" HorizontalOptions="Center" />
+                <Label
+                    FontSize="Header"
+                    HorizontalOptions="Center"
+                    Text="Eintragen" />
+                <Entry
+                    x:Name="entryGewicht"
+                    HorizontalOptions="Center"
+                    Placeholder="Gewicht eintragen"
+                    WidthRequest="150" />
+                <DatePicker x:Name="datePicker" HorizontalOptions="Center" />
+                <Button
+                    Clicked="GewichtEintragen_clicked"
+                    Text="Speichern"
+                    WidthRequest="120" />
+                <Label
+                    FontSize="Header"
+                    HorizontalOptions="Center"
+                    Text="Statistiken" />
+
+                <Button
+                    Clicked="GraphAnzeigen30"
+                    Text="Graph anzeigen (letze 30 Tage)"
+                    WidthRequest="250" />
+                <Button
+                    Clicked="GraphAnzeigen90"
+                    Text="Graph anzeigen (letze 90 Tage)"
+                    WidthRequest="250" />
+
+                <Label x:Name="peakWeight" />
+            </VerticalStackLayout>
+            <micro:ChartView
+                x:Name="chartView"
+                Grid.Column="1"
+                HeightRequest="500" />
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

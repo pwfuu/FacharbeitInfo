@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Facharbeit.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="LoginPage">
+    <VerticalStackLayout>
+        <Label
+            Margin="0,60,0,0"
+            HorizontalOptions="Center"
+            Text="Anmelden"
+            TextColor="#a787cc" />
+        <Entry
+            x:Name="entryUsername"
+            Placeholder="Benutzername"
+            WidthRequest="200" />
+        <Entry
+            x:Name="entryPassword"
+            IsPassword="True"
+            Placeholder="Passwort"
+            WidthRequest="200" />
+        <Button
+            Margin="10"
+            Clicked="Login_clicked"
+            HeightRequest="20"
+            HorizontalOptions="Center"
+            Text="Anmelden"
+            WidthRequest="200" />
+        <Label
+            Margin="0,40,0,0"
+            HorizontalOptions="Center"
+            Text="oder"
+            TextColor="White" />
+        <Label
+            Margin="0,50,20,10"
+            HorizontalOptions="Center"
+            Text="Registrieren"
+            TextColor="#a787cc" />
+        <Entry
+            x:Name="entryUsernameReg"
+            Placeholder="Benutzername"
+            WidthRequest="200" />
+        <Entry
+            x:Name="entryPasswordReg"
+            IsPassword="True"
+            Placeholder="Passwort"
+            WidthRequest="200" />
+        <Entry
+            x:Name="entryPasswordRegSafe"
+            IsPassword="True"
+            Placeholder="Passwort erneut eingeben"
+            WidthRequest="200" />
+        <Button
+            Margin="10"
+            Clicked="Register_clicked"
+            HorizontalOptions="Center"
+            Text="Registrieren"
+            WidthRequest="200" />
+
+    </VerticalStackLayout>
+</ContentPage>
